@@ -1,0 +1,47 @@
+/*样式覆盖*/
+.navbar-default{
+  background-color: #fff;
+}
+.home{
+  height:100%;
+  width:100%;
+  a{
+    text-decoration: none;
+  }
+}
+.home-header{
+  position: relative;
+  background-color: #23262E;
+  .header-title{
+    position: fixed;
+    top:15px;
+    left: 20px;
+    font-size: 26px;
+    color: #bec1c0;
+  }
+  .layui-nav{
+    position: absolute;
+    right: 5%;
+    top: 0;
+    padding: 0;
+    background: none;
+  }
+  .component{position: absolute; width: 200px; left: 185px; top: 16px; }
+  .component .layui-input{height: 30px; padding-left: 12px; background-color: #424652; background-color: rgba(255,255,255,.05); border: none 0; color: #fff; font-size: 12px;}
+  .component .layui-form-select .layui-edge{display: none; border-top-color: #999;}
+  .component .layui-form-select dl{top: 36px; background-color: rgba(255,255,255,.9)}
+}
+.home-sidebar{
+  height: 100%;
+  background-color: #d4d4d4;
+  top:60px;
+}
+.home-content{
+  height: 100%;
+  padding-left: 200px;
+}
+@media screen and (max-width: 750px) {
+  .component{display: none}
+  .home-sidebar{display: none}
+  .home-content{padding-left: 0px;}
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "menuName": "文档",
+    "subMenus": [
+      {
+        "menuName": "文档",
+        "subMenus": [
+          {
+            "menuName": "子文档",
+            "menuUrl": ".test"
+          }
+        ]
+      },
+      {
+        "menuName": "文档",
+        "subMenus": [
+          {
+            "menuName": "子文档",
+            "menuUrl": ".test"
+          },
+          {
+            "menuName": "子文档",
+            "menuUrl": ".test1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "menuName": "示例",
+    "subMenus": [
+      {
+        "menuName": "示例",
+        "subMenus": [
+          {
+            "menuName": "子示例",
+            "menuUrl": ".test"
+          }
+        ]
+      },
+      {
+        "menuName": "示例",
+        "subMenus": [
+          {
+            "menuName": "子示例",
+            "menuUrl": ".test"
+          },
+          {
+            "menuName": "子示例",
+            "menuUrl": ".test"
+          }
+        ]
+      }
+    ]
+  }
+]
