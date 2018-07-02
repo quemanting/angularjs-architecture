@@ -13,8 +13,8 @@ define([
 
     app.config(['$stateProvider', '$urlRouterProvider', '$couchPotatoProvider', '$httpProvider',
         function($stateProvider, $urlRouterProvider, $couchPotatoProvider,$httpProvider) {
-        //$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-        // $urlRouterProvider.otherwise("home");
+        $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+        $urlRouterProvider.otherwise("home");
     }]);
 
     app.run(['$couchPotato', '$state', '$stateParams', '$rootScope', 
@@ -27,8 +27,7 @@ define([
             $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {//前端路由跳转后回调
 
             });
-
-            // $state.go('home');
+            $state.go('home');
         }
     ]);
 

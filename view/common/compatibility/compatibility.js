@@ -1,3 +1,4 @@
+//兼容
 //indexOf for IE8
 if (!Array.prototype.indexOf) {
     Array.prototype.indexOf = function(elt /*, from*/ ) {
