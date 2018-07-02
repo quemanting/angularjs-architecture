@@ -17,5 +17,13 @@ angular.module("route",[])
             dummy: $couchPotatoProvider.resolveDependencies(['app/test/test.js'])
         }
     })
+    .state('home.front_end_specification', {
+        url: "/front_end_specification",
+        templateUrl: 'app/document/front_end_specification/front_end_specification.html',
+        controller: 'fontEndSpecificationCtrl',
+        resolve: {
+            dummy: $couchPotatoProvider.resolveDependencies(['app/document/front_end_specification/front_end_specification.ctrl.js'])
+        }
+    })
 });
 

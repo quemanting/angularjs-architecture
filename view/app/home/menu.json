@@ -3,11 +3,11 @@
     "menuName": "文档",
     "subMenus": [
       {
-        "menuName": "文档",
+        "menuName": "架构",
         "subMenus": [
           {
-            "menuName": "子文档",
-            "menuUrl": ".test"
+            "menuName": "前端规范",
+            "menuUrl": ".front_end_specification"
           }
         ]
       },

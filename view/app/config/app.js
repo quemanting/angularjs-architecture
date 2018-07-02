@@ -4,7 +4,7 @@ define([
     'angular-ui-bootstrap-tpls',//模态框出处
     'angular-shiro',
     'angular-cookies',
-    'app/config/app.route',
+    'app/config/route',
     'layui'
 ], function(couchPotato) {
     var app = angular.module('app', ['scs.couch-potato', 'ui.router','route']); //必须得注入ui.router才能使用$stateProvider

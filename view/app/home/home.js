@@ -13,7 +13,6 @@ define(['app/config/app','layer'], function (app) {
                     var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
                     element.on('nav', function(elem){//监听导航点击
                         // layer.msg(elem.text());
-                        console.log(elem)
                     });
                 });
                 layui.use('form', function(){
@@ -40,7 +39,7 @@ define(['app/config/app','layer'], function (app) {
                 });
             },
             gotoMenu:function(row){
-                $state.go(row.menuUrl)
+                $state.go("home"+row.menuUrl)
             }
         };
 
