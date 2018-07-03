@@ -1,15 +1,15 @@
 define(['app/config/app','showdown','mCustomScrollbar'], function (app,showdown) {
-    app.registerController('fontEndSpecificationCtrl',function ($scope,$http,$state) {// app.registerController属于couch// potata的方法
+    app.registerController('fontEndSpecificationCtrl',function ($scope,$http,$state) {
         /**
          * 请求业务
          */
         var requestObj = $scope.requestObj = {
             init:function(){
                 requestObj.markdownInit();
-                requestObj.mCustomScrollbarInit();
+                // requestObj.mCustomScrollbarInit();
             },
             mCustomScrollbarInit:function(){
-                angular.element(".module-wrap").mCustomScrollbar({
+                angular.element.mCustomScrollbar({
                     mouseWheelPixels:300,
                     scrollInertia:0,
                     autoHideScrollbar:true,
