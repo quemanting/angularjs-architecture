@@ -1,4 +1,4 @@
-define(['app/config/app','showdown'], function (app,showdown) {
+define(['app/config/app','showdown','mCustomScrollbar'], function (app,showdown) {
     app.registerController('fontEndSpecificationCtrl',function ($scope,$http,$state) {// app.registerController属于couch// potata的方法
         /**
          * 请求业务
@@ -6,6 +6,15 @@ define(['app/config/app','showdown'], function (app,showdown) {
         var requestObj = $scope.requestObj = {
             init:function(){
                 requestObj.markdownInit();
+                requestObj.mCustomScrollbarInit();
+            },
+            mCustomScrollbarInit:function(){
+                angular.element(".module-wrap").mCustomScrollbar({
+                    mouseWheelPixels:300,
+                    scrollInertia:0,
+                    autoHideScrollbar:true,
+                    mouseWheel:{ enable: true }
+                });
             },
             markdownInit:function(){
                 /*layui.use('code', function(){ //加载code模块

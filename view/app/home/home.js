@@ -1,4 +1,4 @@
-define(['app/config/app','mCustomScrollbar'], function (app,mCustomScrollbar) {
+define(['app/config/app'], function (app) {
     app.registerController('homeCtrl',function ($scope,$http,$state) {// app.registerController属于couch potata的方法
         /**
          * 请求业务
@@ -49,13 +49,9 @@ define(['app/config/app','mCustomScrollbar'], function (app,mCustomScrollbar) {
         };
 
         requestObj.init();
+
         $(window).resize(function() {
             requestObj.initHomeHeihgt();
         });
-        (function($){
-            $(window).on("load",function(){
-                $(".home-content").mCustomScrollbar();
-            });
-        })(jQuery);
     })
 });

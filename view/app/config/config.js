@@ -55,7 +55,8 @@ require.config({
         'webuploader': 'lib/webuploader/webuploader.min',
         'swfobject': 'lib/swfobject/swfobject',
         'showdown':'lib/showdown-master/dist/showdown.min',
-        'mCustomScrollbar':'lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min'
+        'mCustomScrollbar':'lib/mCustomScrollbar/jquery.mCustomScrollbar',
+        'jquery-mousewheel':'lib/mCustomScrollbar/js/uncompressed/jquery.mousewheel-3.0.6'
     },
     shim: { // "垫" 加载非AMD规范的js 为那些没有使用define()来声明依赖关系、设置模块的"浏览器全局变量注入"型脚本做依赖和导出配置。shim配置仅设置了代码的依赖关系
         "angular": {
@@ -105,7 +106,7 @@ require.config({
         "artDialog": ["jquery"],
         "jquery-print": ["jquery"],
         "easyui": ["jquery"],
-        "mCustomScrollbar":["jquery"],
+        "mCustomScrollbar":["jquery","jquery-mousewheel"],
         'WdatePicker': {
             deps: ["jquery"],
             exports: "WdatePicker"
