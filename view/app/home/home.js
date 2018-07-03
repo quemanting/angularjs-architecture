@@ -7,6 +7,7 @@ define(['app/config/app','layer'], function (app) {
             init:function(){
                 requestObj.layuiInit();
                 requestObj.getMenu();
+                requestObj.initTableHeihgt();
             },
             layuiInit:function(){
                 layui.use('element', function(){
@@ -37,6 +38,10 @@ define(['app/config/app','layer'], function (app) {
                         })
                     })
                 });
+            },
+            initTableHeihgt: function() {
+                var newheight = $('.home').height() - 60;
+                $('.home-content').height(newheight);
             },
             gotoMenu:function(row){
                 $state.go("home"+row.menuUrl)

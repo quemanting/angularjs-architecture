@@ -53,7 +53,8 @@ require.config({
         'map-plus': 'lib/offlinemap/map_plus',
         'map-city': 'lib/offlinemap/map_city',
         'webuploader': 'lib/webuploader/webuploader.min',
-        'swfobject': 'lib/swfobject/swfobject'
+        'swfobject': 'lib/swfobject/swfobject',
+        'showdown':'lib/showdown-master/dist/showdown.min'
     },
     shim: { // "垫" 加载非AMD规范的js 为那些没有使用define()来声明依赖关系、设置模块的"浏览器全局变量注入"型脚本做依赖和导出配置。shim配置仅设置了代码的依赖关系
         "angular": {
