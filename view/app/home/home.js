@@ -1,4 +1,4 @@
-define(['app/config/app','layer'], function (app) {
+define(['app/config/app','mCustomScrollbar'], function (app,mCustomScrollbar) {
     app.registerController('homeCtrl',function ($scope,$http,$state) {// app.registerController属于couch potata的方法
         /**
          * 请求业务
@@ -7,7 +7,7 @@ define(['app/config/app','layer'], function (app) {
             init:function(){
                 requestObj.layuiInit();
                 requestObj.getMenu();
-                requestObj.initTableHeihgt();
+                requestObj.initHomeHeihgt();
             },
             layuiInit:function(){
                 layui.use('element', function(){
@@ -39,9 +39,9 @@ define(['app/config/app','layer'], function (app) {
                     })
                 });
             },
-            initTableHeihgt: function() {
-                var newheight = $('.home').height() - 60;
-                $('.home-content').height(newheight);
+            initHomeHeihgt: function() {
+                var newheight = $('body').height() - 60;
+                $('.home-body').height(newheight);
             },
             gotoMenu:function(row){
                 $state.go("home"+row.menuUrl)
@@ -49,5 +49,13 @@ define(['app/config/app','layer'], function (app) {
         };
 
         requestObj.init();
+        $(window).resize(function() {
+            requestObj.initHomeHeihgt();
+        });
+        (function($){
+            $(window).on("load",function(){
+                $(".home-content").mCustomScrollbar();
+            });
+        })(jQuery);
     })
 });

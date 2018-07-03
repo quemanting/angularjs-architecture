@@ -2,11 +2,11 @@
 .navbar-default {
   background-color: #fff;
 }
-.home {
+.home-body {
   height: 100%;
   width: 100%;
 }
-.home a {
+.home-body a {
   text-decoration: none;
 }
 .home-header {
